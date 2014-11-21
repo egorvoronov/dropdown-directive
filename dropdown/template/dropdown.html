@@ -1,0 +1,22 @@
+<div class="dropdown" ng-click="dropdownCtrl.clearFilter()">
+    <button class="btn btn-default dropdown-toggle"
+            type="button"
+            id="dropdownMenu1"
+            data-toggle="dropdown"
+            aria-expanded="true"
+            ng-click="dropdownCtrl.focusOnInput()"
+    >
+        Dropdown
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" ng-hide="dropdown.noUl">
+        <div class="form-group">
+            <input type="text"
+                   id="searchCar"
+                   class="form-control"
+                   placeholder="Search"
+                   ng-model="dropdown.query"
+            >
+        </div>
+    </ul>
+</div>

@@ -1,0 +1,3 @@
+li.selected > a, li.selected > a:hover {
+    background-color: grey;
+}

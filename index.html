@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="dropdown-app">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>dropdown App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="public/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="public/stylesheets/style.css">
+
+    </head>
+    <body>
+
+        <dropdown width="600px" max-height="150px" ng-model="dropdown.selectedCar" on-change="dropdownCtrl.selectCar">
+            <item-group ng-repeat="carsGroup in cars" title="{{carsGroup.title}}">
+                <item ng-repeat="car in carsGroup.list | filter:dropdown.query" value="{{car.id}}">{{car.title}}</item>
+            </item-group>
+        </dropdown>
+
+
+        <script src="public/vendor/jquery/jquery-2.1.1.min.js"></script>
+        <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="public/vendor/angular/angular.min.js"></script>
+        <script src="dropdown/dropdown-app.js"></script>
+    </body>
+</html>
